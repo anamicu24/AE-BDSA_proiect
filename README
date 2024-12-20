@@ -1,0 +1,4 @@
+Pasi in rularea aplicatiei:
+->instalarea dependintelor cu npm i inainte de rularea aplicatiei
+->rularea aplicatiei pe partea de client side si server side folosind terminalul si comanda npm run dev
+->folosirea URL-ului http://localhost:5173 pe orice tip de browser web

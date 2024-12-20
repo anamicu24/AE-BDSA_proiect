@@ -1,0 +1,839 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbarWrapper {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.navbarWrapper a {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-decoration: none;
+    background-color: darkcyan;
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 50%;
+    background-color: darkcyan;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=submit] {
+    background-color: #4CAF50;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .formWrapper {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .dataSortingWrapper {
+    padding: 16px;
+  }
+
+  .loginButtonsWrapper{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .homepageWrapper {
+    display: flex;
+  }
+
+  .filtersWrapper {
+    border-right: 1px solid #ddd;
+    padding: 16px;
+    height: calc(100dvh - 51px);
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 16px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+  }
+  
+  .product-card img {
+    max-width: 200px; /* Adjust the width as needed */
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+    align-self: center;
+  }
+  
+  .product-card .product-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-card p {
+    color: #555;
+  }
+  
+  .product-card .price {
+    font-size: 1.5em;
+    color: #e91e63;
+    font-weight: 600;
+  }  
+  
+  .product-card .rating {
+    margin: 8px 0;
+  }
+  
+  .star {
+    font-size: 1.2em;
+    color: #ddd;
+  }
+  
+  .star.filled {
+    color: #ff9800;
+  }
+
+  .price-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .add-to-cart {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-to-cart:hover {
+    background-color: rgba(0, 139, 139, 0.9);
+  }
+
+  .cart-container {
+    margin: 16px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 75%;
+  }
+
+  .cart-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .cart-item img {
+    max-width: 150px; /* Adjust the width as needed */
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .cart-item-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .cart-item-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30px;
+  }
+
+  .cart-total {
+    text-align: right;
+  }
+
+  .cart-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+  }
+
+  .cart-button{
+    width: fit-content;
+    text-transform: uppercase;
+    background-color: #007bff;
+  }
+
+  .cart-summary {
+    padding: 16px;
+  }
+
+  /* Stiluri pentru formularul de adăugare a utilizatorului */
+.add-user-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.add-user-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-user-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-user-form button:hover {
+  background-color: #45a049;
+}
+
+
+/* Stiluri generale */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #004d6d;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Formular */
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Butoane pentru acțiuni */
+button.action-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button.action-btn:hover {
+  background-color: #218838;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}
+
+
+/* Resetarea stilurilor implicite */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stiluri generale */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Fundal deschis */
+  color: #333;
+  padding: 20px;
+}
+
+/* Centrăm titlurile */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Stil pentru secțiuni */
+.section {
+  margin-bottom: 30px;
+}
+
+/* Carduri pentru utilizatori */
+.user-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Titlu card utilizator */
+.user-card .user-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Informații card utilizator */
+.user-card .user-info {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Stiluri pentru butoane */
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Folosim un chenar ușor pentru lista de utilizatori */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Carduri utilizatori responsiv */
+@media (max-width: 768px) {
+  .user-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mesaje de succes și eroare */
+.message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
+}
+
+
+.formWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.userList {
+  margin-top: 30px;
+}
+
+.userCard {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.userCard p {
+  margin: 5px 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Container principal */
+div {
+  margin: 20px;
+}
+
+/* Stiluri pentru titluri */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Mesaje de succes sau eroare */
+p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Container pentru lista de utilizatori */
+.userList {
+  display: flex;
+  flex-wrap: wrap; /* Permite cardurilor să se mute pe o linie nouă când este necesar */
+  justify-content: flex-start; /* Aliniază cardurile de la stânga */
+  gap: 20px; /* Adaugă spațiu între carduri */
+  margin-top: 20px;
+}
+
+/* Stiluri pentru cardurile utilizatorilor */
+.userCard {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Lățimea cardului utilizatorului */
+  min-width: 200px; /* Asigură-te că toate cardurile au aceeași lățime */
+  text-align: center; /* Centrarea textului în card */
+}
+
+.userCard p {
+  margin: 10px 0;
+}
+
+/* Form pentru adăugarea unui utilizator */
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Butoane pentru carduri */
+button {
+  padding: 6px 10px; /* Dimensiuni mai mici pentru butonul de adăugare */
+  background-color: #4CAF50; /* Verde pentru adăugare */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Stiluri pentru butoanele de stergere și actualizare */
+button + button {
+  margin-left: 10px;
+  background-color: #f44336; /* Roșu pentru ștergere */
+}
+
+button + button:hover {
+  background-color: #d32f2f;
+}
+
+/* Form pentru adăugarea unui utilizator */
+form button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajustează dimensiunea butonului de adăugare utilizatori */
+button[type="submit"] {
+  width: 200px; /* Lățimea butonului */
+  padding: 10px 15px;
+  font-size: 14px; /* Mărimea textului din buton */
+}
+
+/* Stiluri pentru inputurile formularului */
+input[type="text"], input[type="password"], select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Stiluri pentru cardurile de utilizatori */
+.userCard {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  min-width: 200px;
+  text-align: center;
+}
+
+/* Stiluri pentru titluri și descrierea fiecărui utilizator */
+.userCard p {
+  margin: 10px 0;
+}
+
+/* Cardurile de utilizatori */
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stiluri pentru inputurile formularului */
+input, select {
+  padding: 8px;
+  margin: 8px 0;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* Containere pentru header și formularul de adăugare */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Marginile cardurilor pentru utilizatori */
+.userCard {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaugă margini la formularul de adăugare utilizatori */
+form {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Cardurile de utilizatori vor arăta mai stilizate cu margini rotunjite */
+.userCard {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Stiluri CSS pentru formulare și produse */
+
+/* Stil pentru formulare */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Stil pentru lista de produse */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Stil pentru fiecare produs */
+.product-item {
+  border: 1px solid #ccc; /* Adaugă un chenar */
+  border-radius: 8px;
+  padding: 15px;
+  width: 220px; /* Lățimea fiecărui produs */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adaugă umbră pentru un efect mai frumos */
+  background-color: #f9f9f9;
+  transition: all 0.3s ease; /* Efect de tranziție la hover */
+}
+
+.product-item:hover {
+  transform: translateY(-5px); /* Efect de ridicare la hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Umbră mai puternică */
+}
+
+/* Stil pentru butonul de ștergere */
+.product-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.8rem; /* Buton mai mic */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+  background-color: #c82333;
+}
+
+.product-item p {
+  margin: 5px 0;
+}
+
